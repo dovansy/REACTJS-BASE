@@ -1,0 +1,10 @@
+{
+  "compilerOptions": {
+    "baseUrl": ".",
+    "paths": {
+      "@screens/*": ["./src/screens/*"],
+      "@constants/*": ["./src/constants/*"]
+    }
+  },
+  "exclude": ["node_modules", "build", "coverage", "dist", "lib"]
+}
