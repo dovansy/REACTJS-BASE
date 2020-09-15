@@ -3,7 +3,7 @@ import { BrowserRouter as Router, Route, Switch } from 'react-router-dom'
 import { HomeScreen, LoginScreen } from '@screens/index'
 import PrivateRoute from './PrivateRoute'
 import Header from '@components/Header'
-import NavBar from '@components/NavBar'
+import SideBar from '@components/SideBar'
 
 export class AppNavigator extends Component {
   render() {
@@ -22,8 +22,10 @@ class MainNavigator extends Component {
     return (
       <>
         <Header />
-        <NavBar />
+        <SideBar />
         <Switch>
+          <Route path="/Login" exact component={LoginScreen} />
+          <Route path="/Home" exact component={HomeScreen} />
           <PrivateRoute path="/" exact Component={HomeScreen} />
         </Switch>
       </>

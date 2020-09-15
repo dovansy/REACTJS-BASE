@@ -1,0 +1,47 @@
+.me-logo {
+  justify-content: initial;
+}
+
+.me-txt-logo {
+  color: white;
+}
+
+.nav-icon {
+  margin-right: 1rem !important;
+}
+.me-delete {
+  display: none;
+  margin-left: 50px;
+  color: #ced4da;
+  font-size: 15px;
+  justify-content: initial;
+}
+
+.actived {
+  background-color: #626567;
+  border-radius: 5px;
+  padding: 0px;
+  margin: 0;
+}
+.nav-link-hover {
+  margin-bottom: 0px !important;
+}
+
+@media (max-width: 990px) {
+  .me-delete {
+    display: inline;
+  }
+}
+
+.me-menu-drop {
+  background-color: #70707094;
+  border-radius: 5px;
+}
+
+.me-sub-menu-item {
+  margin-left: 15px;
+}
+
+.sub-menu {
+  background-color: #70707094;
+}

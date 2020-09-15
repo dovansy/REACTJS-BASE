@@ -1,9 +1,9 @@
 import React from 'react'
-import '../../styles/Login.css'
 import { Link, Redirect } from 'react-router-dom'
+import { ROUTER, STRING } from '@constants/Constant'
 import { requestLogin } from '../../constants/Api'
+import '../../styles/Login.css'
 import Cookie from 'js-cookie'
-import { ROUTER } from '@constants/Constant'
 
 class LoginScreen extends React.Component {
   constructor(props) {
@@ -45,7 +45,7 @@ class LoginScreen extends React.Component {
       <>
         <div className="container-fluid">
           <div className="loginForm">
-            <img src={require('../../assets/img_logo.png')} alt="logo" />
+            <img src={require('../../assets/img_logo.png')} alt="logo" style={{ width: '30%', height: 'auto' }} />
             <form>
               <div className="form-group">
                 <input
@@ -66,12 +66,14 @@ class LoginScreen extends React.Component {
                 />
               </div>
               <div className="form-group">
-                <a href="forgot-pass">Quên mật khẩu?</a>
+                <a href="forgot-pass" style={{ textDecoration: 'none' }}>
+                  {STRING.forgotPass}
+                </a>
               </div>
               <Link to={ROUTER.HOME}>
                 <button type="submit" className="btn btn-danger" onClick={this.login}>
                   <div className="login-button-content">
-                    <span>Đăng nhập</span>
+                    <span>{STRING.login}</span>
                   </div>
                 </button>
               </Link>
